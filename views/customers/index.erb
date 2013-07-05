@@ -1,0 +1,10 @@
+<h1>This is the index view of customers</h1>
+<ul>
+<% @customers.each do |customer| %>
+  <li>
+    <h2><a href="/customers/<%= customer.id %>"><%= customer.name %></a>
+    <span><%= pretty_date(customer.created_at) %></span>
+    </h2>
+  </li>
+<% end %>
+</ul>
